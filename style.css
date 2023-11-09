@@ -4,6 +4,11 @@
     padding: 0;
     margin: 0;
 }
+@font-face{
+ font-family: Odin;
+ src: url(imgS/Norse-Bold.otf);
+}
+
 html{
     padding: 0;
     margin: 0;
@@ -15,7 +20,7 @@ body{
 }
 
 aside{
-    background-image: url(imgS/jonny-gios-XQLO326EoI4-unsplash.jpg);
+    background-image: url(imgS/david-becker-HQLglOp8FW4-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,10 +42,14 @@ aside{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-top: -300px;
+    position: fixed;
 }
  
 .logo-text{
   color: white;
   font-size: 5em;
   font-weight: 1000;
+  font-family: 'Odin', serif;
+  letter-spacing: 5px;
 }
