@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+}
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    font-size: 14px;
+}
+
+aside{
+    background-image: url(imgS/jonny-gios-XQLO326EoI4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 500px;
+}
+
+.logo-img{  
+   height: 200px;
+   width: 150px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+ 
+.logo-text{
+  color: white;
+  font-size: 5em;
+  font-weight: 1000;
+}
