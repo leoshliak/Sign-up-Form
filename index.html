@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ce1faa7116.js" crossorigin="anonymous"></script>
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -13,20 +14,22 @@
         <img src="imgS/odin-lined.png" alt="logo" class="logo-img">
         <h1 class="logo-text">ODIN</h1>
         </div>
+        <a href="#form" class="go-down"><i class="fa-solid fa-arrow-down-long" style="color: #ffffff;"></i></a>
         <cite>
             Photo by <a href="https://unsplash.com/@beckerworks" target="_blank">David Becker</a>
             on <a href="https://unsplash.com/images/nature/seascape?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
         </cite>
     </aside>
-    <main class="main">
+    <main class="main" >
         <header>
             <p class="text1">This is not a real online service! You know you need something like this 
                 in your life to help you realize your deepest dreams. Sign up now to get started.</p>
                 <p class="text2">You <i>know</i> what you want to.</p>
         </header>
-        <form action="" method="post">
+        <form action="" method="post" id="form">
              <div class="form-title"><h2>Let's do this!</h2></div>
          <fieldset>
+            <div class="form-grid">
             <div class="input-div">
             <label for="first-name">First Name</label>
              <input type="text" class="input" id="first-name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Thor" name="first-name"  required>
@@ -50,7 +53,7 @@
              <div class="input-div">
              <label for="password2">Confirm Password</label>
              <input type="password"  id="password2" placeholder="Confirm Password" required maxlength="30" minlength="4" onchange="checkPasswords()" >
-            </div>
+            </div></div>
          </fieldset>
          <div class="button-div">
          <button type="submit"  id="submit">Create Account</button>

@@ -12,6 +12,7 @@
 html{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -20,6 +21,7 @@ body{
     background-color: #e6e4e4;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
+    
 }
 
 aside{
@@ -30,8 +32,8 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-     height: 100vh;
-    width: 700px;
+    height: 100vh;
+    width: 25%;
 }
 
 .logo-img{  
@@ -53,6 +55,10 @@ aside{
   font-weight: 1000;
   font-family: 'Odin', serif;
   letter-spacing: 5px;
+}
+
+.go-down{
+    display: none;
 }
 
 aside cite {
@@ -84,8 +90,8 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  
+  width: 75%;
+  height: 100vh;
 }
 
 header{
@@ -96,7 +102,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     line-height: 40px;
 }
@@ -107,30 +113,37 @@ form{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
- 
 }
 
 fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 60px;
-    padding-left: 220px;
-    padding-right: 100px;
-    padding-top: 30px;
-    gap: 10px;
+    padding-top: 38px;
+    padding-bottom: 38px ;
+    row-gap: 22px;
+    column-gap: 50px;
     font-size: 1.3rem;
     font-weight: 600;
+    width: 95%;
 }
 
 .input-div{
     display: flex;
     flex-direction: column;
-    
+    gap: 2px;
 }
  input{
-    width: 380px;
+    width: 100%;
     height: 35px;
     border: 2px solid rgb(75, 72, 72);
     border-radius: 10px;
@@ -153,6 +166,7 @@ fieldset{
     justify-content: center;
     font-family: 'Odin', serif;
     letter-spacing: 5px;
+    width: 100%;
 }
 input::placeholder{
     font-style: italic;
@@ -162,19 +176,19 @@ input::placeholder{
 input:focus{
   outline: 2px solid blue;
   border: none;
-  box-shadow: 2px 1px 6px blue;
+  box-shadow: 2px 1px 4px blue;
   background-color: #f3f1f1;
 }
 
 .input:not(:placeholder-shown):invalid{
     border: none;
     outline: 2px solid red;
-    box-shadow: 2px 1px 6px red;
+    box-shadow: 2px 1px 4px red;
 }
 .input:not(:placeholder-shown):valid{
     border: none;
     outline: 2px solid rgb(3, 182, 3);
-    box-shadow: 2px 1px 6px rgb(3, 182, 3);
+    box-shadow: 2px 1px 4px rgb(3, 182, 3);
 }
 
 .button-div{
@@ -192,7 +206,7 @@ button{
     font-weight: 800;
     border-radius: 20px;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     background-color: rgb(6, 6, 56);
     color: white;
     transition: all 0.3s ease-out;
@@ -223,3 +237,206 @@ button:hover{
     color: blue;
 }
 
+@media (max-width: 1165px) {
+    .logo-img {
+        height: 140px;
+        width: 100px;
+    }
+    .logo-text {
+        font-size: 4em;
+        font-weight: 900;
+        letter-spacing: 4px;
+    }
+    .logo{
+        gap: 0px;
+    }
+    aside cite {
+        font-size: 0.8em;
+        padding: 0 0 0.4em 0.8em;
+    }
+    header{
+        font-size: 1.4em;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .form-title{
+        font-size: 1.5rem;
+        height: 70px;
+    }
+    .form-grid {
+        padding-top: 30px;
+        padding-bottom: 34px;
+        row-gap: 15px;
+        column-gap: 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    button{
+      width: 220px;  
+      height: 45px;
+      font-size: 1.5rem;
+      margin-top: 0px;
+      margin-bottom: 24px;
+      border-radius: 15px;
+    }
+    .account-text {
+        font-size: 1.3rem;
+        letter-spacing: 1.3px;
+    }
+}
+@media (max-width: 860px) {
+    .logo{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    aside cite {
+        font-size: 0.7em;
+        padding: 0 0 0.3em 0.6em;
+        color: #e0e0e0;
+    }
+    header {
+        font-size: 1.2em;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    form {
+        width: 100%;
+        height: 550px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-grid {
+        padding-top: 26px;
+        padding-bottom: 30px;
+        row-gap: 12px;
+        column-gap: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    input {
+        height: 28px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    button {
+        width: 210px;
+        height: 44px;
+        font-size: 1.4rem;
+        margin-top: 0px;
+        margin-bottom: 24px;
+        border-radius: 15px;
+    }    
+    .button-div {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 620px) {
+    body{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+    }
+    .logo-img {
+        height: 220px;
+        width: 165px;
+    }
+    .logo {
+        gap: 5px;
+        margin-top: 70px;
+    }
+    .logo-text{
+        font-size: 6rem;
+        letter-spacing: 5px;
+    }
+    .go-down{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(70px);
+        color: #fff;
+        gap: 15px;
+    }
+    .fa-arrow-down-long{
+        font-size: 4rem;
+        display: flex;
+    }
+    aside cite {
+        font-size: 1em;
+        padding: 0 0 0.5em 0;
+        color: #e0e0e0;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+    }
+    header {
+    font-size: 1.4em;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 40px;
+}
+form{
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+}
+.form-title {
+    font-size: 1.6rem;
+    height: 70px;
+}
+.form-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 15px;
+}
+.input-div {
+    width: 90%;
+    gap: 3px;
+}
+input {
+    height: 35px;
+    border-radius: 12px;
+    padding: 5px;
+    font-size: 1.35rem;
+    font-weight: 540;
+    letter-spacing: 0.8px;
+}
+.button-div{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+button {
+    width: 240px;
+    height: 60px;
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 15px;
+}
+}
+@media (max-width: 550px) {
+    .button-div{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px
+    }
+}
